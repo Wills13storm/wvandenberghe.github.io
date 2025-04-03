@@ -14,7 +14,7 @@
   <style>
     :root {
       --primary: #2c3e50;
-      --secondary: #3498db;
+      --secondary: #5b21b6;
       --text-dark: #2d3748;
       --text-muted: #4a5568;
       --bg-light: #f4f6f8;
@@ -66,14 +66,23 @@
     }
 
     h2 {
-      font-size: 1.5rem;
-      color: var(--secondary);
+      font-size: 1.8rem;
+      color: var(--primary);
       margin-top: 2rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      color: var(--secondary);
+      margin: 2rem 0 1rem;
+      border-bottom: 2px solid var(--secondary);
+      display: inline-block;
+      padding-bottom: 0.3rem;
     }
 
     section {
       padding: 2rem 1rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -94,13 +103,44 @@
       transform: scale(1.2);
     }
 
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
     .project-card {
       background: var(--card-bg);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-left: 4px solid var(--secondary);
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card .content {
+      padding: 1rem;
+    }
+
+    .project-card h4 {
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
     }
 
     footer {
@@ -124,7 +164,7 @@
   <section class="hero">
     <img src="img/profil.jpg" alt="William's VAN DEN BERGHE">
     <h1>William's VAN DEN BERGHE</h1>
-    <h2> Chef de projet clinique / Data Analyst</h2>
+    <h2>Data Analyst</h2>
     <p>Transformez vos données en décisions éclairées.</p>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/william-s-van-den-berghe-38700a153" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -135,38 +175,60 @@
   <section id="about">
     <h2>À propos</h2>
     <p>Après plusieurs années dans la recherche clinique en tant que chef de projet et ARC promoteur, j’ai découvert une passion pour l’analyse des données.<br><br>
-Aujourd’hui en reconversion vers le métier de Data Analyst, je mobilise mes compétences en gestion, rigueur scientifique et curiosité pour donner du sens aux données, les transformer en leviers de décision, et améliorer les process.
-
-Grâce à une formation spécialisée et plusieurs projets concrets (gestion budgétaire, prédiction dans le domaine hippique, dashboards interactifs…), j’ai acquis des compétences solides en Python, SQL, Power BI, et en machine learning.
-
-<br><br> Mon objectif : mettre la data au service de secteurs qui ont du sens — comme la santé, l’innovation ou l’impact social — et continuer d’apprendre pour aller plus loin.<br><br>
-
-Curieux, structuré et orienté impact, je suis prêt à relever de nouveaux défis au croisement des données et de l’humain.<br></p>
+Aujourd’hui en reconversion vers le métier de Data Analyst, je mobilise mes compétences en gestion, rigueur scientifique et curiosité pour donner du sens aux données, les transformer en leviers de décision, et améliorer les process.</p>
+    <p>Grâce à une formation spécialisée et plusieurs projets concrets (gestion budgétaire, prédiction dans le domaine hippique, dashboards interactifs…), j’ai acquis des compétences solides en Python, SQL, Power BI, et en machine learning.</p>
+    <p>Mon objectif : mettre la data au service de secteurs qui ont du sens — comme la santé, l’innovation ou l’impact social — et continuer d’apprendre pour aller plus loin.</p>
   </section>
 
   <section id="projects">
     <h2>Projets</h2>
-    <div class="project-card">
-      <h3>BudgetWise - Gestionnaire de budget</h3>
-      <p>Application Streamlit pour gérer ses finances personnelles avec interface sécurisée et tableaux interactifs.</p>
-      <p><strong>Tech :</strong> Python, SQLite, Streamlit, Plotly</p>
-      <a href="https://github.com/Wills13storm/BudgetWise" target="_blank">Voir le projet</a>
+
+    <h3>Data Visualisation / Power BI</h3>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="img/dashboard_powerbi.png" alt="Dashboard Toys">
+        <div class="content">
+          <h4>Dashboard Toys and Models</h4>
+          <p>Tableau de bord interactif avec SQL et Power BI pour l'analyse des performances.</p>
+        </div>
+      </div>
     </div>
+
     <div class="project-card">
-      <h3>PROS PMU - Analyse prédictive</h3>
-      <p>Projet de machine learning pour prédire les résultats des courses hippiques à partir de données enrichies.</p>
-      <p><strong>Tech :</strong> Pandas, Scikit-learn, Matplotlib</p>
-      <a href="https://github.com/Wills13storm/PROS-PMU" target="_blank">Voir le projet</a>
+    <img src="img/dashboard_clients.png" alt="Dashboard Cyclistic">
+    <div class="content">
+      <h4>Analyse des habitudes des utilisateurs de vélos de Cyclistic</h4>
+      <p>Exploration des habitudes d'utilisations des vélos dans la ville de Chicago</p>
+    </div>
+  </div>
+
+    <div class="project-card">
+    <img src="img/dashboard_clients.png" alt="Dashboard Data jobs">
+    <div class="content">
+      <h4>Analyse des métiers de la Data</h4>
+      <p>Exploration et analyse des salaires des principaux métiers de la Data</p>
+    </div>
+  </div>
+
+    <h3>Machine Learning</h3>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="img/reco_film.png" alt="Recommandation de Films">
+        <div class="content">
+          <h4>Recommandation de Films</h4>
+          <p>Création d'un système de recommandation intelligent basé sur les préférences utilisateurs (Web scraping, Machine Learning, Streamlit).</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Tu peux me contacter sur <a href="mailto:william.vdb@example.com">william.vdb@example.com</a></p>
+    <p>Tu peux me contacter sur <a href="mailto:william.vdb@example.com">williams.vandenberghe@gmail.com</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 William's VAN DEN BERGHE. Tous droits réservés.</p>
+    <p>&copy; 2025 William VAN DEN BERGHE. Tous droits réservés.</p>
   </footer>
 </body>
 
