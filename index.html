@@ -123,11 +123,10 @@
     }
 
     .project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-  background-color: white;
-}
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
 
     .project-card .content {
       padding: 1rem;
@@ -163,8 +162,8 @@
   </header>
 
   <section class="hero">
-    <img src="img/profil.jpg" alt="William's VAN DEN BERGHE">
-    <h1>William's VAN DEN BERGHE</h1>
+    <img src="img/profil.jpg" alt="William VAN DEN BERGHE">
+    <h1>William VAN DEN BERGHE</h1>
     <h2>Data Analyst</h2>
     <p>Transformez vos données en décisions éclairées.</p>
     <div class="social-links">
@@ -175,7 +174,7 @@
 
   <section id="about">
     <h2>À propos</h2>
-    <p>Après plusieurs années dans la recherche clinique en tant que chef de projet et ARC promoteur, j’ai découvert une passion pour l’analyse des données.<br><br>
+    <p>Après plusieurs années dans la recherche clinique en tant que chef de projet et ARC promoteur, j’ai découvert une passion pour l’analyse des données.<br>
 Aujourd’hui en reconversion vers le métier de Data Analyst, je mobilise mes compétences en gestion, rigueur scientifique et curiosité pour donner du sens aux données, les transformer en leviers de décision, et améliorer les process.</p>
     <p>Grâce à une formation spécialisée et plusieurs projets concrets (gestion budgétaire, prédiction dans le domaine hippique, dashboards interactifs…), j’ai acquis des compétences solides en Python, SQL, Power BI, et en machine learning.</p>
     <p>Mon objectif : mettre la data au service de secteurs qui ont du sens — comme la santé, l’innovation ou l’impact social — et continuer d’apprendre pour aller plus loin.</p>
@@ -185,31 +184,38 @@ Aujourd’hui en reconversion vers le métier de Data Analyst, je mobilise mes c
     <h2>Projets</h2>
 
     <h3>Data Visualisation / Power BI</h3>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="img/Toys_and_models.jpg" alt="Dashboard Toys">
-        <div class="content">
-          <h4>Dashboard Toys and Models</h4>
-          <p>Tableau de bord interactif avec SQL et Power BI pour l'analyse des performances.</p>
-        </div>
+<div class="project-grid">
+
+  <div class="project-card">
+    <img src="img/dashboard_powerbi.png" alt="Dashboard Toys">
+    <div class="content">
+      <h4>Dashboard Toys and Models</h4>
+      <p>Tableau de bord interactif avec SQL et Power BI pour l'analyse des performances.</p>
+      <a href="https://github.com/Wills13storm/BudgetWise" target="_blank" style="display:inline-block;margin-top:10px;padding:6px 12px;background-color:#5b21b6;color:white;border-radius:5px;text-decoration:none;font-size:0.9rem;">Voir le projet</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="img/dashboard_cyclistic.png" alt="Dashboard Cyclistic">
+    <div class="content">
+      <h4>Analyse Cyclistic</h4>
+      <p>Exploration des habitudes d’utilisation des vélos à Chicago.</p>
+      <a href="https://github.com/Wills13storm/Cyclistic-Case-Study" target="_blank" style="display:inline-block;margin-top:10px;padding:6px 12px;background-color:#5b21b6;color:white;border-radius:5px;text-decoration:none;font-size:0.9rem;">Voir le projet</a>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="img/dashboard_datajobs.png" alt="Dashboard Data Jobs">
+    <div class="content">
+      <h4>Data Jobs</h4>
+      <p>Analyse des métiers de la data avec Indeed et visualisation via Power BI.</p>
+      <a href="https://github.com/Wills13storm/Data-Jobs-Dashboard" target="_blank" style="display:inline-block;margin-top:10px;padding:6px 12px;background-color:#5b21b6;color:white;border-radius:5px;text-decoration:none;font-size:0.9rem;">Voir le projet</a>
+    </div>
+  </div>
+
+</div>
       </div>
     </div>
-
-    <div class="project-card">
-    <img src="img/dashboard_clients.png" alt="Dashboard Cyclistic">
-    <div class="content">
-      <h4>Analyse des habitudes des utilisateurs de vélos de Cyclistic</h4>
-      <p>Exploration des habitudes d'utilisations des vélos dans la ville de Chicago</p>
-    </div>
-  </div>
-
-    <div class="project-card">
-    <img src="img/dashboard_clients.png" alt="Dashboard Data jobs">
-    <div class="content">
-      <h4>Analyse des métiers de la Data</h4>
-      <p>Exploration et analyse des salaires des principaux métiers de la Data</p>
-    </div>
-  </div>
 
     <h3>Machine Learning</h3>
     <div class="project-grid">
@@ -225,7 +231,7 @@ Aujourd’hui en reconversion vers le métier de Data Analyst, je mobilise mes c
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Tu peux me contacter sur <a href="mailto:william.vdb@example.com">williams.vandenberghe@gmail.com</a></p>
+    <p>Tu peux me contacter sur <a href="mailto:william.vdb@example.com">william.vdb@example.com</a></p>
   </section>
 
   <footer>
