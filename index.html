@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de William's VAN DEN BERGHE - Chef de projet clinique // Data Analyst" />
+  <meta name="description" content="Portfolio de William's VAN DEN BERGHE - Data Analyst" />
   <title>William's VAN DEN BERGHE - Chef de projet clinique // Data Analyst</title>
 
-  <!-- Polices et icônes -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
@@ -19,6 +18,10 @@
       --text-muted: #4a5568;
       --bg-light: #f4f6f8;
       --card-bg: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     * {
@@ -86,26 +89,9 @@
       margin: 0 auto;
     }
 
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .social-links a {
-      color: var(--secondary);
-      font-size: 1.5rem;
-      transition: transform 0.2s;
-    }
-
-    .social-links a:hover {
-      transform: scale(1.2);
-    }
-
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
       margin-top: 1rem;
     }
@@ -115,11 +101,12 @@
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      transition: transform 0.2s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(91, 33, 182, 0.2);
     }
 
     .project-card img {
@@ -128,6 +115,11 @@
       aspect-ratio: 2 / 1;
       object-fit: cover;
       display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.03);
     }
 
     .project-card .content {
@@ -145,6 +137,26 @@
       color: var(--text-muted);
     }
 
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background-color: var(--secondary);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background-color: #431a9e;
+    }
+
+    .skills-list li {
+      margin-bottom: 0.5rem;
+    }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -158,16 +170,18 @@
   <header>
     <nav>
       <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#experience">Expériences</a>
       <a href="#projects">Projets</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <img src="img/profil.jpg" alt="William's VAN DEN BERGHE">
-    <h1>William's VAN DEN BERGHE</h1>
+    <img src="img/profil.jpg" alt="William VAN DEN BERGHE">
+    <h1>William VAN DEN BERGHE</h1>
     <h2>Chef de projet clinique // Data Analyst</h2>
-    <p>Comprendre les données, c’est comprendre les enjeux.</p>
+    <p>Des données claires pour des décisions éclairées.</p>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/william-s-van-den-berghe-38700a153" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/Wills13storm" target="_blank"><i class="fab fa-github"></i></a>
@@ -176,65 +190,79 @@
 
   <section id="about">
     <h2>À propos</h2>
-    <p>Après plusieurs années dans la recherche clinique en tant que chef de projet et ARC promoteur, j’ai découvert une passion pour l’analyse des données.<br>
-Aujourd’hui en reconversion vers le métier de Data Analyst, je mobilise mes compétences en gestion, rigueur scientifique et curiosité pour donner du sens aux données, les transformer en leviers de décision, et améliorer les process.</p>
+    <p>Après plusieurs années dans la recherche clinique en tant que chef de projet et ARC promoteur, j’ai découvert une passion pour l’analyse des données. Aujourd’hui en reconversion vers le métier de Data Analyst, je mobilise mes compétences en gestion, rigueur scientifique et curiosité pour donner du sens aux données, les transformer en leviers de décision, et améliorer les process.</p>
     <p>Grâce à une formation spécialisée et plusieurs projets concrets (gestion budgétaire, prédiction dans le domaine hippique, dashboards interactifs…), j’ai acquis des compétences solides en Python, SQL, Power BI, et en machine learning.</p>
-    <p>Mon objectif : mettre la data au service de secteurs qui ont du sens — comme la santé, l’innovation ou l’impact social — et continuer d’apprendre pour aller plus loin.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Compétences techniques</h2>
+    <ul class="skills-list">
+      <li><strong>Langages & Outils :</strong> Python (Pandas, NumPy, regex, NLP, webscraping, ML), R, SQL, Power BI, Tableau, DAX</li>
+      <li><strong>Data & Cloud :</strong> SQLite, MySQL, Docker, ETL, MageAI</li>
+      <li><strong>Statistiques & Visualisation :</strong> Analyse descriptive, régressions, visualisation de données (Matplotlib, Seaborn, Plotly)</li>
+      <li><strong>Soft Skills :</strong> Rigueur, pédagogie, communication, curiosité</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Expériences professionnelles</h2>
+    <ul class="skills-list">
+      <li><strong>ARC Promoteur / Chef de projet clinique</strong> – GHICL (2022 - aujourd’hui)<br>Protocoles, dépôts réglementaires (ANSM, CNIL), gestion de budget, appels à projets</li>
+      <li><strong>Chef de Projet Clinique</strong> – FH ORTHO (2019 - 2022)<br>Suivi d'études cliniques, protocoles, CRFs, analyses statistiques intermédiaires</li>
+      <li><strong>ARC Investigateur</strong> – CHU de Lille (2016 - 2019)<br>Recrutement patients, recueil de données, coordination investigateurs</li>
+    </ul>
   </section>
 
   <section id="projects">
     <h2>Projets</h2>
 
     <h3>Data Visualisation / Power BI</h3>
-<div class="project-grid">
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="img/Toys_and_models.jpg" alt="Dashboard Toys and Models">
+        <div class="content">
+          <h4>Dashboard Toys and Models</h4>
+          <p>Analyse des ventes de miniatures avec Power BI.</p>
+          <a href="https://github.com/Wills13storm/BudgetWise" target="_blank">Voir le projet</a>
+        </div>
+      </div>
 
-  <div class="project-card">
-    <img src="img/Toys_and_models.jpg" alt="Dashboard Toys">
-    <div class="content">
-      <h4>Dashboard Toys and Models</h4>
-      <p>Tableau de bord interactif avec SQL et Power BI pour l'analyse des performances.</p>
-      <a href="https://github.com/Wills13storm/BudgetWise" target="_blank" style="display:inline-block;margin-top:10px;padding:6px 12px;background-color:#5b21b6;color:white;border-radius:5px;text-decoration:none;font-size:0.9rem;">Voir le projet</a>
-    </div>
-  </div>
+      <div class="project-card">
+        <img src="img/Cyclistic.jpg" alt="Dashboard Cyclistic">
+        <div class="content">
+          <h4>Analyse Cyclistic</h4>
+          <p>Étude des habitudes d’utilisation des vélos à Chicago avec SQL et Power BI.</p>
+          <a href="https://github.com/Wills13storm/Cyclistic-Case-Study" target="_blank">Voir le projet</a>
+        </div>
+      </div>
 
-  <div class="project-card">
-    <img src="img/Cyclistic.jpg" alt="Dashboard Cyclistic">
-    <div class="content">
-      <h4>Analyse Cyclistic</h4>
-      <p>Exploration des habitudes d’utilisation des vélos à Chicago.</p>
-      <a href="https://github.com/Wills13storm/Cyclistic-Case-Study" target="_blank" style="display:inline-block;margin-top:10px;padding:6px 12px;background-color:#5b21b6;color:white;border-radius:5px;text-decoration:none;font-size:0.9rem;">Voir le projet</a>
-    </div>
-  </div>
-
-  <div class="project-card">
-    <img src="img/dashboard_datajobs.png" alt="Dashboard Data Jobs">
-    <div class="content">
-      <h4>Data Jobs</h4>
-      <p>Analyse des métiers de la data avec Indeed et visualisation via Power BI.</p>
-      <a href="https://github.com/Wills13storm/Data-Jobs-Dashboard" target="_blank" style="display:inline-block;margin-top:10px;padding:6px 12px;background-color:#5b21b6;color:white;border-radius:5px;text-decoration:none;font-size:0.9rem;">Voir le projet</a>
-    </div>
-  </div>
-
-  <div class="project-card">
-    <img src="img/Allstar_management.jpg" alt="Dashboard Allstar Management">
-    <div class="content">
-      <h4>Data Jobs</h4>
-      <p>Analyse des salaires et des contrats de différents athlètes.</p>
-      <a href="https://github.com/Wills13storm/Data-Jobs-Dashboard" target="_blank" style="display:inline-block;margin-top:10px;padding:6px 12px;background-color:#5b21b6;color:white;border-radius:5px;text-decoration:none;font-size:0.9rem;">Voir le projet</a>
-    </div>
-  </div>
-
-</div>
+      <div class="project-card">
+        <img src="img/Allstar_management.jpg" alt="Dashboard Allstar Management">
+        <div class="content">
+          <h4>Allstar Management</h4>
+          <p>Analyse des salaires et contrats dans le sport pro à l'aide de Power BI.</p>
+          <a href="https://github.com/Wills13storm/Data-Jobs-Dashboard" target="_blank">Voir le projet</a>
+        </div>
       </div>
     </div>
 
     <h3>Machine Learning</h3>
     <div class="project-grid">
       <div class="project-card">
-        <img src="img/reco_film.png" alt="Recommandation de Films">
+        <img src="img/reco_film.png" alt="Système de recommandation de films">
         <div class="content">
-          <h4>Recommandation de Films</h4>
-          <p>Création d'un système de recommandation intelligent basé sur les préférences utilisateurs (Web scraping, Machine Learning, Streamlit).</p>
+          <h4>Recommandation de films</h4>
+          <p>Création d’un système de recommandation basé sur les préférences utilisateurs. Web scraping + NLP.</p>
+          <a href="https://github.com/Wills13storm/Reco-Films" target="_blank">Voir le projet</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="img/pros_pmu.jpg" alt="PROS PMU">
+        <div class="content">
+          <h4>PROS PMU - Prédiction hippique</h4>
+          <p>Modèle prédictif pour estimer les classements aux courses hippiques (scikit-learn, pandas, modélisation).</p>
+          <a href="https://github.com/Wills13storm/PROS-PMU" target="_blank">Voir le projet</a>
         </div>
       </div>
     </div>
@@ -242,7 +270,7 @@ Aujourd’hui en reconversion vers le métier de Data Analyst, je mobilise mes c
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Contactez moi sur <a href="mailto:william.vdb@example.com">williams.vandenberghe@gmail.com</a></p>
+    <p>Contactez-moi sur <a href="mailto:williams.vandenberghe@gmail.com">williams.vandenberghe@gmail.com</a></p>
   </section>
 
   <footer>
