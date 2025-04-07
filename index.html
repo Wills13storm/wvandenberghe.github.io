@@ -10,27 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   
-<style>
-  @media (min-width: 768px) {
-    /* Forcer le conteneur global des colonnes à utiliser une grille à 2 colonnes */
-    #competences > div {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 2rem !important;
-      justify-content: center !important;
-      align-items: flex-start !important;
-    }
-    /* Supprimer les contraintes de flex et de min-width sur chaque colonne */
-    #competences > div > div {
-      flex: unset !important;
-      min-width: unset !important;
-    }
-    /* Dans la colonne Data & Analyse, forcer l'affichage des blocs en 2 colonnes */
-    #competences .skills-grid {
-      grid-template-columns: repeat(2, 1fr) !important;
-    }
-  }
-</style>
   <style>
     :root {
       --primary: #2c3e50;
@@ -290,8 +269,8 @@
           <div style="margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
             <span class="badge">Analyse descriptive</span>
             <span class="badge">Suivi EI/EIG</span>
-            <span class="badge">Vigilance des essais cliniques</span>
-            <span class="badge">Rédaction de rapports intermédiaires et finaux</span>
+            <span class="badge">Vigilance des essais</span>
+            <span class="badge">Rédaction de rapports</span>
           </div>
         </div>
       </div>
