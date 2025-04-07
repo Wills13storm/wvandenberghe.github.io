@@ -9,7 +9,28 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-
+  
+<style>
+  @media (min-width: 768px) {
+    /* Forcer le conteneur global des colonnes à utiliser une grille à 2 colonnes */
+    #competences > div {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 2rem !important;
+      justify-content: center !important;
+      align-items: flex-start !important;
+    }
+    /* Supprimer les contraintes de flex et de min-width sur chaque colonne */
+    #competences > div > div {
+      flex: unset !important;
+      min-width: unset !important;
+    }
+    /* Dans la colonne Data & Analyse, forcer l'affichage des blocs en 2 colonnes */
+    #competences .skills-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+</style>
   <style>
     :root {
       --primary: #2c3e50;
@@ -214,7 +235,8 @@
     <p>Grâce à une formation spécialisée et plusieurs projets concrets (gestion budgétaire, prédiction dans le domaine hippique, dashboards interactifs…), j’ai acquis des compétences solides en Python, SQL, Power BI, et en machine learning.</p>
   </section>
 
-  <section id="competences" style="background-color: #f4f6f8; padding: 3rem 1rem;">
+  <!-- Section Compétences -->
+<section id="competences" style="background-color: #f4f6f8; padding: 3rem 1rem;">
   <h2 style="text-align: center;">Compétences techniques</h2>
 
   <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; align-items: flex-start; margin-top: 2rem;">
@@ -280,7 +302,6 @@
       <h3 style="text-align: center; color: #2c3e50;">Data & Analyse</h3>
 
       <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-
         <!-- Bloc 1 -->
         <div style="background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
           <h4>💻 Programmation & Développement</h4>
@@ -336,7 +357,6 @@
             <span class="badge">DBT</span>
           </div>
         </div>
-
       </div>
     </div>
   </div>
