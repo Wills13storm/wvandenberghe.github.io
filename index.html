@@ -173,6 +173,15 @@
     background-color: #d6d6d6;
   }
 
+    /* badge compétences */
+    .badge {
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
     
   </style>
 </head>
@@ -211,8 +220,8 @@
   <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;">
     
     <!-- Recherche clinique -->
-    <div style="flex: 1 1 400px; background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 10px;">
-      <h3 style="text-align: center; color: #ffffff;">Recherche clinique & Chef de projet</h3>
+    <div style="flex: 1 1 400px; background: #ffffff; padding: 1.5rem; border-radius: 10px;">
+      <h3 style="text-align: center; color: #2c3e50;">Recherche clinique & Chefferie de projet</h3>
       <ul style="margin-top: 1rem; line-height: 1.6;">
         <li>Élaboration et mise en conformité de protocoles d’études</li>
         <li>Déclarations réglementaires (ANSM, CNIL, CPP...)</li>
@@ -231,36 +240,33 @@
       <h3 style="text-align: center; color: #2c3e50;">Data & Analyse</h3>
       <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; margin-top: 1rem;">
 
-        <div style="flex: 1 1 160px;">
-          <strong>Programmation</strong>
-          <p style="font-size: 0.9rem;">Python, SQL, HTML, CSS</p>
+        <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+  <div style="background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+    <h4>Programmation & Développement</h4>
+    <div style="margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+      <span class="badge">Python</span>
+      <span class="badge">SQL</span>
+      <span class="badge">HTML</span>
+      <span class="badge">CSS</span>
+    </div>
+  </div>
+  <div style="background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+    <h4>Analyse de Données & Machine Learning</h4>
+    <div style="margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+      <span class="badge">Pandas</span>
+      <span class="badge">NumPy</span>
+      <span class="badge">Scikit-learn</span>
+    </div>
+  </div>
+  <div style="background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+    <h4>Bases de Données & Cloud</h4>
+    <div style="margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+      <span class="badge">MySQL</span>
+      <span class="badge">PostgreSQL</span>
+      <span class="badge">AWS</span>
+      <span class="badge">DBT</span>
+  </div>
         </div>
-        
-        <div style="flex: 1 1 160px;">
-          <strong>Analyse & ML</strong>
-          <p style="font-size: 0.9rem;">Pandas, NumPy, Scikit-learn</p>
-        </div>
-
-        <div style="flex: 1 1 160px;">
-          <strong>Visualisation</strong>
-          <p style="font-size: 0.9rem;">Power BI, Tableau, Matplotlib, Seaborn, Plotly</p>
-        </div>
-
-        <div style="flex: 1 1 160px;">
-          <strong>Collecte de données</strong>
-          <p style="font-size: 0.9rem;">Web Scraping, API</p>
-        </div>
-
-        <div style="flex: 1 1 160px;">
-          <strong>Bases de données & Cloud</strong>
-          <p style="font-size: 0.9rem;">MySQL, PostgreSQL, AWS, DBT</p>
-        </div>
-
-        <div style="flex: 1 1 160px;">
-          <strong>Collaboration</strong>
-          <p style="font-size: 0.9rem;">Git, GitHub, Google Colab, Slack, Praxedo</p>
-        </div>
-
       </div>
     </div>
   </div>
